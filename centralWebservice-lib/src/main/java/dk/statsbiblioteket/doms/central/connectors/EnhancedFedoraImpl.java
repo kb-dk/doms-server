@@ -146,6 +146,11 @@ public class EnhancedFedoraImpl implements EnhancedFedora {
     }
 
     @Override
+    public ObjectProfile getLimitedObjectProfile(String pid, Long asOfTime) throws BackendMethodFailedException, BackendInvalidCredsException, BackendInvalidResourceException {
+        return fedora.getLimitedObjectProfile(pid, asOfTime);
+    }
+
+    @Override
     public void modifyObjectLabel(String pid, String name, String comment)
             throws BackendInvalidCredsException, BackendMethodFailedException, BackendInvalidResourceException {
         fedora.modifyObjectLabel(pid, name, comment);

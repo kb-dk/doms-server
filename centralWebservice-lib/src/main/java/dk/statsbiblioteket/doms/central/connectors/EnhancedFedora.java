@@ -50,6 +50,14 @@ public interface EnhancedFedora {
             BackendInvalidCredsException,
             BackendInvalidResourceException;
 
+    public ObjectProfile getLimitedObjectProfile(String pid,
+                                          Long asOfTime)
+            throws
+            BackendMethodFailedException,
+            BackendInvalidCredsException,
+            BackendInvalidResourceException;
+
+
     void modifyObjectLabel(String pid,
                            String name,
                            String comment)
